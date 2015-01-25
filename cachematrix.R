@@ -1,8 +1,9 @@
 ## This program provides a cacheable "matrix".
 ## The matrix can cache its inverse matrix result
 
-## Write a short comment describing this function
-
+## This function creates a special matrix that caches its inverse
+# it is composed of 4 functions, two setters and two getters for matrix 
+# and the inverse cache
 makeCacheMatrix <- function(x = matrix()) {
   
   cache <- NULL
@@ -27,8 +28,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## This function calculates the inverse of the input matrix.
+## Then it sets the cache value in the input matrix
+## In the case that the cache is not null, it will simply return the cache.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   cache <- x$getCachedInverse
